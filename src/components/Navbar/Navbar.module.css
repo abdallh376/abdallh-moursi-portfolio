@@ -1,0 +1,397 @@
+/* ============================================================
+   Navbar — Navbar.module.css
+   Premium glassmorphism sticky navbar
+   ============================================================ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.35s ease, backdrop-filter 0.35s ease,
+    box-shadow 0.35s ease, border-bottom 0.35s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.navbar.scrolled {
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px) saturate(1.6);
+  -webkit-backdrop-filter: blur(18px) saturate(1.6);
+  box-shadow: var(--nav-shadow);
+  border-bottom: 1px solid var(--bg-glass-border);
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.monogram {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: var(--shadow-glow);
+  flex-shrink: 0;
+}
+
+.monogramA {
+  position: absolute;
+  left: 5px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: -1px;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.monogramM {
+  position: absolute;
+  right: 5px;
+  font-size: 22px;
+  font-weight: 900;
+  font-family: 'Georgia', serif;
+  color: var(--color-brand-accent);
+  letter-spacing: -1px;
+  line-height: 1;
+  text-shadow: 0 0 10px rgba(96, 193, 229, 0.5);
+}
+
+.monogramDivider {
+  position: absolute;
+  width: 2px;
+  height: 60%;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+  opacity: 0.6;
+}
+
+.brandName {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0.03em;
+  transition: color 0.2s;
+}
+
+.brandTagline {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* ── Desktop nav ── */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  background: none;
+  border: none;
+  padding: 0.4rem 0.65rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+  position: relative;
+  white-space: nowrap;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background: var(--gradient-accent);
+  border-radius: 2px;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center;
+}
+
+.navLink:hover {
+  color: var(--color-brand-accent);
+  background: rgba(91, 145, 163, 0.08);
+}
+
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.navLink.active {
+  color: var(--color-brand-accent);
+  font-weight: 600;
+}
+
+.navLink.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* ── Right actions ── */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.cvButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-on-accent);
+  background: var(--gradient-accent);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+}
+
+.cvButton:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-glow);
+  opacity: 0.92;
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0;
+  gap: 5px;
+  transition: background 0.2s;
+}
+
+.hamburger:hover {
+  background: rgba(91, 145, 163, 0.1);
+}
+
+.hamburgerLine {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text-primary);
+  transform-origin: center;
+}
+
+/* ── Mobile drawer overlay ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+  backdrop-filter: blur(4px);
+}
+
+/* ── Mobile drawer ── */
+.mobileDrawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(320px, 85vw);
+  z-index: 1002;
+  background: var(--bg-glass);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border-left: 1px solid var(--bg-glass-border);
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.drawerClose {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(91, 145, 163, 0.12);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+
+.drawerClose:hover {
+  background: rgba(91, 145, 163, 0.22);
+}
+
+.mobileNavLinks {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.mobileNavLink {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: color 0.2s, background 0.2s, transform 0.15s;
+  font-family: inherit;
+  letter-spacing: 0.02em;
+  text-align: left;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-brand-accent);
+  background: rgba(91, 145, 163, 0.08);
+  transform: translateX(4px);
+}
+
+.mobileNavLink.active {
+  color: var(--color-brand-accent);
+  background: rgba(91, 145, 163, 0.12);
+  font-weight: 600;
+}
+
+.mobileNavDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gradient-accent);
+  flex-shrink: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.mobileNavLink.active .mobileNavDot,
+.mobileNavLink:hover .mobileNavDot {
+  opacity: 1;
+}
+
+.drawerFooter {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cvButtonMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-on-accent);
+  background: var(--gradient-accent);
+  border-radius: 24px;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.03em;
+}
+
+.cvButtonMobile:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+/* ── Responsive breakpoints ── */
+@media (max-width: 1024px) {
+  .navLinks {
+    gap: 0rem;
+  }
+  .navLink {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.78rem;
+  }
+}
+
+@media (max-width: 860px) {
+  .navLinks {
+    display: none;
+  }
+  .cvButton {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+  .brandName {
+    font-size: 0.95rem;
+  }
+}

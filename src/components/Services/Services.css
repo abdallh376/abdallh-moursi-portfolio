@@ -1,0 +1,8 @@
+.services-section{padding:clamp(4rem,8vw,6rem) 0;background:var(--bg-primary)}
+.services-grid{width:min(1120px,calc(100% - 2rem));margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
+.service-card{position:relative;min-height:220px;padding:1.5rem;border-radius:18px;border:1px solid var(--border-color);background:var(--bg-card);box-shadow:var(--shadow-sm);overflow:hidden;transition:transform .3s,border-color .3s,box-shadow .3s}
+.service-card::before{content:'';position:absolute;inset:0 0 auto;height:3px;background:var(--gradient-accent);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.service-card:hover{transform:translateY(-7px);border-color:var(--border-accent);box-shadow:var(--shadow-lg)}.service-card:hover::before{transform:scaleX(1)}
+.service-icon-wrap{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;color:var(--color-brand-accent);background:var(--bg-secondary);border:1px solid var(--border-accent);margin-bottom:1.15rem}
+.service-title{font-size:1.08rem;color:var(--text-primary);margin-bottom:.55rem}.service-desc{font-size:.9rem;color:var(--text-muted);line-height:1.7}
+@media(max-width:950px){.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.services-grid{grid-template-columns:1fr}.service-card{min-height:unset}}

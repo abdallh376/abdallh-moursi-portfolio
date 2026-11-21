@@ -1,0 +1,7 @@
+.footer{padding:2.5rem 1rem 1.5rem;background:var(--color-brand-primary);color:#eaf5fb;border-top:1px solid rgba(96,193,229,.2)}
+.footer-inner{width:min(1120px,100%);margin:auto;display:flex;flex-direction:column;align-items:center;gap:1.5rem}
+.footer-brand{display:flex;align-items:center;gap:.85rem}.footer-logo{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#5B91A3,#60C1E5);color:#10243a;font-weight:900;font-size:1.1rem;box-shadow:0 5px 20px rgba(96,193,229,.2)}
+.footer-name-wrap{display:flex;flex-direction:column;line-height:1.35}.footer-name{font-weight:800;font-size:1.05rem}.footer-role{font-size:.82rem;color:#a8c9db}
+.footer-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:.55rem 1.2rem}.footer-nav-link{font-size:.88rem;color:#c2d7e4;transition:color .2s}.footer-nav-link:hover{color:#60C1E5}
+.footer-socials{display:flex;gap:.75rem}.footer-social-btn{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:grid;place-items:center;color:#eaf5fb;transition:background .2s,transform .2s}.footer-social-btn:hover{background:#005A9C;transform:translateY(-3px)}
+.footer-copy{font-size:.8rem;color:#9bb6c8;text-align:center;border-top:1px solid rgba(255,255,255,.12);width:100%;padding-top:1.2rem}

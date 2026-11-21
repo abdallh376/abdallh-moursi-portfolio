@@ -1,0 +1,14 @@
+.certificates-section{padding:clamp(4rem,8vw,6rem) 0;background:var(--bg-secondary)}
+.certificates-grid{width:min(1120px,calc(100% - 2rem));margin:auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
+.cert-card{overflow:hidden;border:1px solid var(--border-color);border-radius:18px;background:var(--bg-card);box-shadow:var(--shadow-sm);transition:transform .3s,border-color .3s,box-shadow .3s}
+.cert-card:hover{transform:translateY(-7px);border-color:var(--border-accent);box-shadow:var(--shadow-lg)}
+.cert-image-wrap{height:165px;background:linear-gradient(135deg,var(--bg-secondary),var(--bg-primary));display:grid;place-items:center;overflow:hidden}
+.cert-image{width:100%;height:100%;object-fit:cover}
+.cert-placeholder{width:82px;height:82px;border-radius:24px;display:grid;place-items:center;color:var(--color-brand-accent);background:var(--bg-glass);border:1px solid var(--border-accent)}
+.cert-body{padding:1.2rem}.cert-title{font-size:1.05rem;color:var(--text-primary);margin-bottom:.45rem}.cert-org,.cert-date{color:var(--text-muted);font-size:.86rem}.cert-date{margin-top:.25rem}
+.cert-btn{margin-top:1rem;padding:.65rem 1rem;border-radius:30px;color:#fff;background:var(--gradient-primary);font-weight:650;width:100%;transition:transform .2s,box-shadow .2s}.cert-btn:hover{transform:translateY(-2px);box-shadow:var(--shadow-glow)}
+.cert-modal-overlay{position:fixed;inset:0;z-index:2000;background:rgba(3,9,20,.82);display:grid;place-items:center;padding:1rem;backdrop-filter:blur(8px)}
+.cert-modal{position:relative;width:min(850px,100%);max-height:90vh;overflow:auto;border-radius:20px;padding:1.25rem;background:var(--bg-card);border:1px solid var(--border-accent);box-shadow:var(--shadow-lg)}
+.cert-modal-close{position:absolute;right:1rem;top:1rem;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;color:var(--text-primary);background:var(--bg-secondary);z-index:1}
+.cert-modal-image{width:100%;max-height:65vh;object-fit:contain;border-radius:12px}.cert-modal-placeholder{min-height:280px;display:grid;place-items:center;color:var(--color-brand-accent)}.cert-modal-info{text-align:center;padding:1rem}.cert-modal-info h3{color:var(--text-primary)}.cert-modal-info p,.cert-modal-info span{color:var(--text-muted)}
+@media(max-width:950px){.certificates-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.certificates-grid{grid-template-columns:1fr}.cert-image-wrap{height:190px}}

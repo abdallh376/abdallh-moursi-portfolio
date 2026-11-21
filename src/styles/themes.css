@@ -1,0 +1,126 @@
+/* ============================================
+   THEME SYSTEM — CSS Custom Properties
+   Light Mode: Navy/steel brand on light surfaces
+   Dark Mode: Deep navy with glowing blue accents
+   ============================================ */
+
+:root,
+[data-theme="light"] {
+  /* Surfaces */
+  --bg-primary: #f0f4f8;
+  --bg-secondary: #e2eaf3;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --bg-glass: rgba(255, 255, 255, 0.72);
+  --bg-glass-border: rgba(43, 74, 99, 0.18);
+
+  /* Brand palette */
+  --color-brand-primary: #131B2B;
+  --color-brand-secondary: #2F4A63;
+  --color-brand-accent: #5B91A3;
+  --color-brand-accent-alt: #3a7a90;
+
+  /* Text */
+  --text-primary: #0f1923;
+  --text-secondary: #2F4A63;
+  --text-muted: #5a7a8e;
+  --text-on-accent: #ffffff;
+
+  /* Borders */
+  --border-color: rgba(43, 74, 99, 0.15);
+  --border-accent: rgba(91, 145, 163, 0.5);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(19, 27, 43, 0.08);
+  --shadow-md: 0 4px 20px rgba(19, 27, 43, 0.12);
+  --shadow-lg: 0 8px 40px rgba(19, 27, 43, 0.16);
+  --shadow-glow: 0 0 24px rgba(91, 145, 163, 0.25);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #131B2B 0%, #2F4A63 100%);
+  --gradient-accent: linear-gradient(135deg, #5B91A3 0%, #3a7a90 100%);
+  --gradient-hero: linear-gradient(135deg, #e8f0f8 0%, #d4e3ef 50%, #c6d9e8 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff, #f0f6fa);
+  --gradient-section-alt: #e8eff7;
+
+  /* Orb colors for background blobs */
+  --orb-1: rgba(91, 145, 163, 0.12);
+  --orb-2: rgba(47, 74, 99, 0.08);
+  --orb-3: rgba(19, 27, 43, 0.05);
+
+  /* Nav */
+  --nav-bg: rgba(240, 244, 248, 0.85);
+  --nav-shadow: 0 2px 20px rgba(19, 27, 43, 0.1);
+
+  /* Progress bar */
+  --progress-track: rgba(91, 145, 163, 0.15);
+  --progress-fill: linear-gradient(90deg, #2F4A63, #5B91A3);
+
+  /* Scroll thumb */
+  --scrollbar-thumb: #5B91A3;
+  --scrollbar-track: #e2eaf3;
+
+  /* Timeline */
+  --timeline-line: linear-gradient(180deg, #2F4A63, #5B91A3);
+  --timeline-dot: #5B91A3;
+}
+
+[data-theme="dark"] {
+  /* Surfaces */
+  --bg-primary: #0d1829;
+  --bg-secondary: #111f38;
+  --bg-card: #152040;
+  --bg-card-hover: #1a2a50;
+  --bg-glass: rgba(21, 32, 64, 0.75);
+  --bg-glass-border: rgba(96, 193, 229, 0.15);
+
+  /* Brand palette */
+  --color-brand-primary: #1B365D;
+  --color-brand-secondary: #005A9C;
+  --color-brand-accent: #60C1E5;
+  --color-brand-accent-alt: #40a8d0;
+
+  /* Text */
+  --text-primary: #e8f4fd;
+  --text-secondary: #a8d4ee;
+  --text-muted: #7ab0cc;
+  --text-on-accent: #0d1829;
+
+  /* Borders */
+  --border-color: rgba(96, 193, 229, 0.12);
+  --border-accent: rgba(96, 193, 229, 0.4);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 32px rgba(96, 193, 229, 0.2);
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #1B365D 0%, #005A9C 100%);
+  --gradient-accent: linear-gradient(135deg, #60C1E5 0%, #40a8d0 100%);
+  --gradient-hero: linear-gradient(135deg, #0d1829 0%, #111f38 50%, #152040 100%);
+  --gradient-card: linear-gradient(145deg, #152040, #111f38);
+  --gradient-section-alt: #0f1e35;
+
+  /* Orb colors */
+  --orb-1: rgba(96, 193, 229, 0.08);
+  --orb-2: rgba(0, 90, 156, 0.12);
+  --orb-3: rgba(27, 54, 93, 0.15);
+
+  /* Nav */
+  --nav-bg: rgba(13, 24, 41, 0.88);
+  --nav-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+
+  /* Progress bar */
+  --progress-track: rgba(96, 193, 229, 0.12);
+  --progress-fill: linear-gradient(90deg, #005A9C, #60C1E5);
+
+  /* Scroll thumb */
+  --scrollbar-thumb: #005A9C;
+  --scrollbar-track: #111f38;
+
+  /* Timeline */
+  --timeline-line: linear-gradient(180deg, #005A9C, #60C1E5);
+  --timeline-dot: #60C1E5;
+}
