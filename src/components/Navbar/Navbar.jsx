@@ -168,8 +168,8 @@ export default function Navbar({ theme, toggleTheme }) {
         {/* Desktop right actions */}
         <div className={styles.actions}>
           <a
-            href="/assets/Abdallh_Maged_CV_ 2.pdf"
-            download="Abdallh_Maged_CV_ 2.pdf"
+            href={`${import.meta.env.BASE_URL}assets/Abdallh-Moursi-CV.pdf`}
+            download="Abdallh-Moursi-CV.pdf"
             className={styles.cvButton}
             aria-label="Download CV"
           >
@@ -259,7 +259,7 @@ export default function Navbar({ theme, toggleTheme }) {
                 animate={{ opacity: 1, y: 0, transition: { delay: 0.35 } }}
               >
                 <a
-                  href="/assets/Abdallh-Moursi-CV.pdf"
+                  href={`${import.meta.env.BASE_URL}assets/Abdallh-Moursi-CV.pdf`}
                   download="Abdallh-Moursi-CV.pdf"
                   className={styles.cvButtonMobile}
                   onClick={() => setMenuOpen(false)}

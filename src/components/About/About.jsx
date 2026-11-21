@@ -257,7 +257,7 @@ export default function About() {
               }}
             >
               <img
-                src="/assets/profile.jpg"
+                src={`${import.meta.env.BASE_URL}assets/profile.jpg`}
                 alt="Abdallh Moursi"
                 style={{
                   position: 'absolute',

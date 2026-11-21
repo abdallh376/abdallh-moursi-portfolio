@@ -179,7 +179,7 @@ function ProfileImage() {
           </div>
         ) : (
           <img
-            src="/assets/profile.jpg"
+            src={`${import.meta.env.BASE_URL}assets/profile.jpg`}
             alt="Abdallh Moursi"
             style={styles.profileImg}
             onError={() => setImgError(true)}
@@ -286,8 +286,8 @@ export default function Hero() {
           {/* CTA buttons */}
           <motion.div variants={itemVariants} style={styles.ctaRow}>
             <a
-              href="/assets/Abdallh_Maged_CV_ 2.pdf"
-              download="Abdallh_Maged_CV_ 2.pdf"
+              href={`${import.meta.env.BASE_URL}assets/Abdallh-Moursi-CV.pdf`}
+              download="Abdallh-Moursi-CV.pdf"
               style={styles.btnPrimary}
               onMouseEnter={(e) => Object.assign(e.currentTarget.style, styles.btnPrimaryHover)}
               onMouseLeave={(e) => Object.assign(e.currentTarget.style, styles.btnPrimary)}

@@ -3,6 +3,8 @@
 // Edit this file to update project cards
 // ============================================
 
+const BASE = import.meta.env.BASE_URL;
+
 export const projects = [
   {
     id: 1,
@@ -12,7 +14,7 @@ export const projects = [
     technologies: ["React", "Node.js",  "MongoDB", "Python", "Flask"],
     githubUrl: "https://github.com/abdallh376/EpiDerma",
     liveUrl: "#",
-    image: "/assets/projects/mk1.png",
+    image: `${BASE}assets/projects/mk1.png`,
     featured: true,
   },
   {
@@ -23,7 +25,7 @@ export const projects = [
     technologies: ["React", "Node.js", "Express.js", "MongoDB"],
     githubUrl: "https://github.com/abdallh376/Dar-Prj",
     liveUrl: "#",
-    image: "/assets/projects/z2.png",
+    image: `${BASE}assets/projects/z2.png`,
     featured: true,
   },
   {
@@ -34,7 +36,7 @@ export const projects = [
     technologies: ["Python", "Flask", "React"],
     githubUrl: "#",
     liveUrl: "#",
-    image: "/assets/projects/project3.jpg",
+    image: `${BASE}assets/projects/project3.jpg`,
     featured: false,
   },
   {
@@ -45,7 +47,7 @@ export const projects = [
     technologies: ["HTML", "CSS", "JavaScript"],
     githubUrl: "#",
     liveUrl: "#",
-    image: "/assets/projects/project4.jpg",
+    image: `${BASE}assets/projects/project4.jpg`,
     featured: false,
   },
 ];
