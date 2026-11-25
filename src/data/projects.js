@@ -34,7 +34,7 @@ export const projects = [
     description:
       "An online food ordering and delivery web application featuring dynamic menu categorization (Burgers, Pizza, Pasta), bilingual support (Arabic & English), real-time cart management, and interactive item favorites for a fast and delightful ordering experience.",
     technologies: ["Angular", "Node.js", "Express.js", "HTML", "CSS"],
-    githubUrl: "https://github.com/abdallh376",
+    githubUrl: "https://github.com/abdallh376/craftcrave",
     liveUrl: "#",
     image: `${BASE}assets/projects/cravecraft.jpg`,
     featured: true,
