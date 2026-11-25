@@ -11,7 +11,7 @@ export const projects = [
     title: "Epiderma",
     description:
       "An AI-powered skin disease detection platform that connects a Flask machine-learning model to a React frontend and Node.js backend. Users upload skin images and receive instant diagnostic predictions with confidence scores.",
-    technologies: ["React", "Node.js",  "MongoDB", "Python", "Flask"],
+    technologies: ["React", "Node.js", "MongoDB", "Python", "Flask"],
     githubUrl: "https://github.com/abdallh376/EpiDerma",
     liveUrl: "#",
     image: `${BASE}assets/projects/mk1.png`,
@@ -30,25 +30,25 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Project Name",
+    title: "CraveCraft",
     description:
-      "Add your project description here. Describe what the project does, the problem it solves, and the key features it offers.",
-    technologies: ["Python", "Flask", "React"],
-    githubUrl: "#",
+      "An online food ordering and delivery web application featuring dynamic menu categorization (Burgers, Pizza, Pasta), bilingual support (Arabic & English), real-time cart management, and interactive item favorites for a fast and delightful ordering experience.",
+    technologies: ["Angular", "Node.js", "Express.js", "HTML", "CSS"],
+    githubUrl: "https://github.com/abdallh376",
     liveUrl: "#",
-    image: `${BASE}assets/projects/project3.jpg`,
-    featured: false,
+    image: `${BASE}assets/projects/cravecraft.jpg`,
+    featured: true,
   },
   {
     id: 4,
-    title: "Project Name",
+    title: "Real Estate (Homyz)",
     description:
-      "Add your project description here. Describe what the project does, the problem it solves, and the key features it offers.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    githubUrl: "#",
+      "A modern real estate property discovery platform helping users find suitable residencies effortlessly. Built with location-based property searching, interactive residency showcases, credibility metrics, and an elegant, responsive UI design.",
+    technologies: ["React", "JavaScript", "HTML", "CSS"],
+    githubUrl: "https://github.com/abdallh376",
     liveUrl: "#",
-    image: `${BASE}assets/projects/project4.jpg`,
-    featured: false,
+    image: `${BASE}assets/projects/realestate.jpg`,
+    featured: true,
   },
 ];
 
